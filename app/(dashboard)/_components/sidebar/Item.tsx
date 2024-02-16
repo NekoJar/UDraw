@@ -17,7 +17,6 @@ export const Item = ({ id, name, imageUrl }: ItemProps) => {
   const { setActive } = useOrganizationList();
 
   const isActive = organization?.id === id;
-
   const onClick = () => {
     if (!setActive) return;
 
