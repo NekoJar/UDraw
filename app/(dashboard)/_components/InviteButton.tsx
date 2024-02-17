@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button";
-import { Dialog, DialogTrigger } from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { OrganizationProfile } from "@clerk/nextjs";
-import { DialogContent } from "@radix-ui/react-dialog";
 import { Plus } from "lucide-react";
 import React from "react";
 
