@@ -28,7 +28,7 @@ export const RenameModal = () => {
   }, [initialValues.title]);
 
   const onSubmit: FormEventHandler<HTMLFormElement> = (e) => {
-    e.preventDefault;
+    e.preventDefault();
 
     mutate({
       id: initialValues.id,
