@@ -40,10 +40,10 @@ export const BoardCard = ({
   const createdAtLabel = formatDistanceToNow(createdAt, { addSuffix: true });
 
   const { mutate: onFavorite, pending: pendingFavorite } = useApiMutation(
-    api.boards.favorite
+    api.board.favorite
   );
   const { mutate: onUnfavorite, pending: pendingUnfavorite } = useApiMutation(
-    api.boards.unfavorite
+    api.board.unfavorite
   );
 
   const toggleFavorite = () => {
