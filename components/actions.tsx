@@ -47,43 +47,41 @@ export const Actions = ({
   };
 
   return (
-    <div className="absolute z-50 top-1 right-1">
-      <DropdownMenu>
-        <DropdownMenuTrigger asChild>{children}</DropdownMenuTrigger>
+    <DropdownMenu>
+      <DropdownMenuTrigger asChild>{children}</DropdownMenuTrigger>
 
-        <DropdownMenuContent
-          onClick={(e) => e.stopPropagation()}
-          side={side}
-          sideOffset={sideOffset}
-          className="w-60"
+      <DropdownMenuContent
+        onClick={(e) => e.stopPropagation()}
+        side={side}
+        sideOffset={sideOffset}
+        className="w-60"
+      >
+        <DropdownMenuItem onClick={onCopyLink} className="p-3 cursor-pointer">
+          <Link2 className="h-4 w-4 mr-2" />
+          Copy board link
+        </DropdownMenuItem>
+        <DropdownMenuItem
+          onClick={() => onOpen(id, title)}
+          className="p-3 cursor-pointer"
         >
-          <DropdownMenuItem onClick={onCopyLink} className="p-3 cursor-pointer">
-            <Link2 className="h-4 w-4 mr-2" />
-            Copy board link
-          </DropdownMenuItem>
-          <DropdownMenuItem
-            onClick={() => onOpen(id, title)}
-            className="p-3 cursor-pointer"
+          <Pencil className="h-4 w-4 mr-2" />
+          Rename
+        </DropdownMenuItem>
+        <ConfirmModal
+          header="Delete board?"
+          description="This will delete the board and all of it's contents."
+          disabled={pending}
+          onConfirm={onDelete}
+        >
+          <Button
+            variant="ghost"
+            className="p-3 cursor-pointer text-sm w-full justify-start font-normal"
           >
-            <Pencil className="h-4 w-4 mr-2" />
-            Rename
-          </DropdownMenuItem>
-          <ConfirmModal
-            header="Delete board?"
-            description="This will delete the board and all of it's contents."
-            disabled={pending}
-            onConfirm={onDelete}
-          >
-            <Button
-              variant="ghost"
-              className="p-3 cursor-pointer text-sm w-full justify-start font-normal"
-            >
-              <Trash2 className="h-4 w-4 mr-2" />
-              Delete
-            </Button>
-          </ConfirmModal>
-        </DropdownMenuContent>
-      </DropdownMenu>
-    </div>
+            <Trash2 className="h-4 w-4 mr-2" />
+            Delete
+          </Button>
+        </ConfirmModal>
+      </DropdownMenuContent>
+    </DropdownMenu>
   );
 };
