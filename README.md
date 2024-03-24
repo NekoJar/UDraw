@@ -12,7 +12,7 @@
 -  Streamlined Workflows: Integrate with existing tools to avoid context switching and save time.
   
 ### Getting Started
--  Go to our website.
+-  Go to our website u-draw-alpha.vercel.app.
 -  Create an Account: Sign up for a free account or choose a paid plan that best suits your needs.
 -  Create a Board: Start a new board and invite your team members to collaborate.
 -  Explore the Features: Dive into the diverse tools and functionalities to unleash your team's potential.
